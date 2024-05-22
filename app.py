@@ -11,12 +11,12 @@ def serve_static(filename):
 # Define a route for the home page
 @app.route('/')
 def home():
-    return template('home', name='World')
+    return template('templates/home', name='World')
 
 # Define a route for a dynamic greeting
 @app.route('/hello/<name>')
 def greet(name):
-    return template('greet', name=name)
+    return template('templates/greet', name=name)
 
 # Run the app on localhost, port 8080
 if __name__ == '__main__':
